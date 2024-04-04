@@ -1,0 +1,11 @@
+def get_fixed_price(before):
+    percent=int(input(prompt))
+    discount=int(input(prompt))
+    before=discount/((100-percent)/100)
+percent=int(input('할인율은? '))
+discount=int(input('A 상품의 할인된 가격은? '))
+before=discount/((100-percent)/100)
+discount=int(input('B 상품의 할인된 가격은? '))
+print('A 상품의 정가는', before, '원')
+before=discount/((100-percent)/100)
+print('B 상품의 정가는', before, '원')
