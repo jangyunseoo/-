@@ -1,29 +1,23 @@
-def read_single_digit(number):
-    if number==0:
-        return '영'
-    elif number==1:
-        return '일'
-    elif number==2:
-        return '이'
-    elif number==3:
-        return '삼'
-    elif number==4:
-        return '사'
-    elif number==5:
-        return '오'
-    elif number==6:
-        return '육'
-    elif number==7:
-        return '칠'
-    elif number==8:
-        return '팔'
-    else:
-        return '구'
+def read_single_digit(n) :
+    if n == 0 : print('영', end=' ')
+    elif n == 1 : print('일', end=' ')
+    elif n == 2 : print('이', end=' ')
+    elif n == 3 : print('삼', end=' ')
+    elif n == 4 : print('사', end=' ')
+    elif n == 5 : print('오', end=' ')
+    elif n == 6 : print('육', end=' ')
+    elif n == 7 : print('칠', end=' ')
+    elif n == 8 : print('팔', end=' ')
+    elif n == 9 : print('구', end=' ')
 
-def read_number(prompt):
-    if int(input(prompt)):
-        return read_single_digit()
+def read_number(n) :
+    d1 = n % 10
+    n //= 10
+    d10 = n % 10
+    n //= 10
+    read_single_digit(n)
+    read_single_digit(d10)
+    read_single_digit(d1)
     
-three=int(input('세 자리 정수 입력: '))
-one=read_single_digit(three)
-print(f'{one} {one} {one}')
+num=int(input('세 자리 정수 입력: '))
+read_number(num)
