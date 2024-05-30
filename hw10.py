@@ -51,4 +51,3 @@ else :
     avg = get_average(scores)
     print(f'평균: {avg}')
     save_data(scores, filepath)
-    
